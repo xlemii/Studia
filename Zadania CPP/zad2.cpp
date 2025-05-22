@@ -1,30 +1,30 @@
 #include <iostream>
 using namespace std;
 
-int main()
+unsigned long long silnia(unsigned int n) 
 {
-double a, b, c, wynik;
-cout << "Podaj liczbe a: ";
-cin >> a;
-cout << "Podaj liczbe b: ";
-cin >> b;
-cout << "Podaj liczbe c: ";
-cin >> c;
+    if (n==0 || n==1) 
+    {
+        return 1;
+    }
 
-if(c>0)
-{
-    wynik = (a*a) + b;
-    cout << "Wynik wynosi: " << wynik;
+    unsigned long long wynik = 1;
+    for (unsigned int i=2; i<=n; ++i) 
+    {
+        wynik*=i;
+    }
+
+    return wynik;
 }
-else if(c<0)
+
+int main() 
 {
-    wynik = a - (b*b);
-    cout << "Wynik wynosi: " << wynik;
-}
-else
-{
-    wynik = 1/(a-b);
-    cout << "Wynik wynosi: " << wynik;   
-}
-return 0;
+    unsigned int a;
+    cout << "Podaj liczbe: ";
+    cin>>a;
+
+    unsigned long long wynik = silnia(a);
+    cout<<"Wynik wynosi: "<<wynik;
+
+    return 0;
 }
