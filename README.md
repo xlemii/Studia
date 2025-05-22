@@ -1,2 +1,2 @@
 # Studia
-Zbiór części zadań które musiałem wykonać podczas studiowania
+Zbiór niektórych zadań które musiałem wykonać podczas studiowania.
